@@ -1,8 +1,8 @@
 function updateClock() {
     const now = new Date();
-    const hrs = String(now.getHours()).padStart(2, '0');
-    const mins = String(now.getMinutes()).padStart(2, '0');
-    const secs = String(now.getSeconds()).padStart(2, '0');
+    const hrs = String(now.getUTCHours()).padStart(2, '0');
+    const mins = String(now.getUTCMinutes()).padStart(2, '0');
+    const secs = String(now.getUTCSeconds()).padStart(2, '0');
 
     document.getElementById('hrs').textContent = hrs;
     document.getElementById('min').textContent = mins;
